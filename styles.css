@@ -16,13 +16,17 @@ body {
 a {
   text-decoration: none;
   color: #efefef;
+ 
 }
-a:hover {
-  color: #6633ff;
-}
+
+
+
 a.selected {
   color:#25FA00;
+  font-size:24px;
+  font-style:oblique;
 }
+
 
 
 /* Section Styles */
@@ -31,7 +35,7 @@ a.selected {
   width: 100%;
   background: black;
   min-height: 30px;
-  padding: 10px;
+  padding:5px;
   position: fixed;
   text-align: center;
 }
@@ -47,22 +51,25 @@ a.selected {
 .nav .name {
     display: block;
     margin-right: auto;
-    color: #25FA00;
+	color:#EFEFEF;   
     font-family: 'Shadows Into Light Two', cursive;
-    font-size: 34px;
-	font-style:italic;
-	font-weight:bold;
+    font-size: 20px;
+	
+	
 	
 }
 .nav li {
   padding: 5px 10px 10px 10px;
+  
 }
 .nav a {
   transition: all .5s;
 }
 .nav a:hover {
   color: #25FA00;
-}
+  transform: scale(1.2);
+  transition-timing-function:ease-in-out;
+ }
 
 
 header {
@@ -78,7 +85,7 @@ header {
   line-height: 1.5;
 }
 header .profile-image {
-  margin-top: 20px;
+  margin-top: 25px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -98,6 +105,7 @@ header .profile-image:hover {
   display: table;
   margin: 10px auto;
   font-weight:bold;
+  transition: all .8s;
 }
 .taglocation{
   background-color: #25FA00;
@@ -106,16 +114,17 @@ header .profile-image:hover {
   border-radius: 5px;
   display: table;
   margin: 10px auto;
-  font-weight:bolder
+  font-weight:bolder;
+  transition: all .8s;
 }
 .tagname:hover {
-  transform: scale(1.3) rotateZ(15deg);
+  transform: scale(1.3) rotateZ(12deg);
   transition-timing-function: ease-in-out;
   color:#efefef;
   background-color:black;
 }
 .taglocation:hover {
-  transform: scale(1.3) rotateZ(-15deg); 	
+  transform: scale(1.3) rotateZ(-12deg); 	
   color:#25FA00;
   background-color:black;
   transition-timing-function:ease-in-out;
@@ -134,16 +143,41 @@ header .profile-image:hover {
   border-radius: 6px;
   transition: all .5s;
 }
+.card .skills li:hover{
+  transform: scale(1.5) rotateZ(-5deg);
+  transition-timing-function: ease-in-out;
+  transition: all .7s;	
+}
+.card .skills li:hover:nth-child(odd){
+  transform: scale(1.5) rotateZ(5deg);
+  transition-timing-function: ease-in-out;
+  transition: all .7s;	
+}
+.learning {
+  margin-top: 25px;
+  width: 320px;
+  height: 350px;
+  border-radius: 20%;
+  border:5px solid black;
+  max-width:100%;
   
-.family {
-	margin-top:auto;
-	padding:25px 25px;
-	max-width:100%;
-	border-radius:100%;
 }
   
-
-.card p {
+.family {
+  margin-top: 25px;
+  width: 325px;
+  height: 430px;
+  border-radius: 100%;
+  box-shadow: 10px 10px 5px #888888;
+}
+.family:hover {
+  box-shadow: 10px 10px 5px #888888;
+  transform: scale(1.005);
+  transition-timing-function: ease-in;
+  transition: all .7s;
+ 	
+}
+  .card p {
 	font-family: 'Rosario', sans-serif;	
 	font-weight:600;
 	font-stretch:expanded;
@@ -162,6 +196,34 @@ header .profile-image:hover {
 }
 #secondary li a:hover {
 	color:#1040DE;
+}
+.contact-info{
+  list-style:none;
+  padding:0;
+  margin:0;
+  font-size:0.9em;
+  
+}
+
+.contact-info a {
+  display:block;
+  min-height:20px;
+  background-repeat:no-repeat;
+  background-size: 20px 20px;
+  padding:0 0 0 30px;
+  margin:0 0 10px;
+}
+
+.contact-info li.phone a {
+  background-image:url('images/phone.png');
+	}
+
+.contact-info li.mail a {
+  background-image:url('images/mail.png');
+}
+
+.contact-info .twitter a {
+  background-image:url('images/twitter.png');
 }
 	
 
@@ -218,6 +280,26 @@ a.social {
   transition: all .5s;
 
 }
+
+ul {
+  list-style:none;
+}
+
+a.treehouse {
+  display: inline-block;
+  text-indent: -9999px;
+  margin:auto;
+  width: 100px;
+  height: 100px;
+  background-size: 100px 100px;
+  opacity: 1;
+  transition: all .5s;
+  background-image:url(images/Treehouse.png);
+  
+ 	}
+a.treehouse:hover {
+  transform:scale(1.2);
+  }
 a.twitter {
   background-image: url(images/twitter.svg);
 }
